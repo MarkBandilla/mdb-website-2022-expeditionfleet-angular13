@@ -1,0 +1,8 @@
+<h2 class="b-goods-f__title">{{ title }}</h2>
+<ul class="arrow-list">
+    <li *ngFor="let child of filterChildren(subMenu)">
+        <a href="{{link +'/'+ child.path}}" class.active="link +'/'+ child.path == route[0]" >
+            <i class="fas fa-long-arrow-alt-right"></i>{{ child.data.label }}
+        </a>
+    </li>
+</ul>

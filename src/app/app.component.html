@@ -1,0 +1,7 @@
+<ui-loader></ui-loader>
+<layout-header></layout-header>
+<ui-slider *ngIf="route && route[1] == ''"></ui-slider>
+<ui-banner *ngIf="route && route[1] != ''"></ui-banner>
+
+<router-outlet></router-outlet>
+<layout-footer></layout-footer>

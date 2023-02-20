@@ -1,0 +1,26 @@
+.nav-item.active > a {
+    color: #ffcc00;
+}
+.dropdown-item.active, .dropdown-item:active {
+    color: black;
+    background: #ffcc00;
+}
+.navbar-brand {
+    padding: 0 !important;
+}
+.navbar-brand .img-fluid {
+    max-width: 240px;
+}
+.header.navbar-scrolling {
+    background-color: #032742 !important;
+}
+.navbar-scrolling .nav-item:not(.active) .nav-link {
+    color: white !important;
+}
+.mobile-slidebar.show {
+    transition: all 0.5s ease;
+    margin-left: -255px; 
+    display: block; 
+    transition-duration: 300ms; 
+    transform: translate(255px, 0px);
+}

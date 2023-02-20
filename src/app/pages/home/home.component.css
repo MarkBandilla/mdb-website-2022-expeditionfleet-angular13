@@ -1,0 +1,23 @@
+.home .b-advantages {
+    margin-left: 0;
+    text-align: center;
+}
+.home .b-advantages .decore01 {
+    width: 100%;
+    background-position: center;
+}
+.home.counter {
+    padding-top: 200px;
+}
+.section-video {
+    background-image: url(/assets/_live/img/banner-featured.png);
+    background-size: cover;
+    background-position: top center;
+}
+@media screen and (max-width: 75em) {
+    .b-advantages,
+    .b-advantages__main {
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+    }
+}

@@ -1,0 +1,114 @@
+<div class="l-main-content">
+    <div class="ui-decor ui-decor_mirror ui-decor_sm-h bg-primary"></div>
+    <div class="container">
+        <div class="b-goods-group-2 row">
+            <div class="col-md-4">
+                <h2 class="b-goods-f__title">Our Fleet</h2>
+                <ul class="arrow-list">
+                    <li *ngFor="let link of links">
+                        <a href="{{link.url}}" [ngClass]="{'active': link.url == router.url}">
+                            <i class="fas fa-long-arrow-alt-right"></i>{{ link.name }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-8">
+                <img [src]="fleet.imagePath" class="w-100 mx-100" *ngIf="!fleet.imagesPath"/>
+                <ui-slider-gallery [images]="fleet.imagesPath" *ngIf="fleet.imagesPath"></ui-slider-gallery>
+                
+                <p>{{fleet.description}}</p>
+                <div *ngIf="fleet.featured" [innerHTML]="fleet.featured"></div>
+                <div *ngIf="fleet.cabins">
+                    <h2 class="b-goods-f__title mt-5">Cabins</h2>
+                    <p [innerHTML]="fleet.cabins"></p>
+                </div>
+                <div *ngIf="fleet.specifications">
+                    <h2 class="b-goods-f__title mt-5">Boat Specifications</h2>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <dl class="data-list-descriptions">
+                                <!-- Make -->
+                                <div class="dd-item">
+                                    <dt>Gross Tonnage:</dt>
+                                    <dd>{{fleet.specifications['Gross Tonnage']}}</dd>
+                                </div>
+                                <div class="dd-item">
+                                    <dt class="left">LOA:</dt>
+                                    <dd class="right">{{fleet.specifications['LOA']}}</dd>
+                                </div>
+                                <div class="dd-item">
+                                    <dt class="left">Breadth:</dt>
+                                    <dd class="right">{{fleet.specifications['Breadth']}}</dd>
+                                </div>
+                                <div class="dd-item">
+                                    <dt class="left">Draft:</dt>
+                                    <dd class="right">{{fleet.specifications['Draft']}}</dd>
+                                </div>
+                                <div class="dd-item">
+                                    <dt class="left">KW:</dt>
+                                    <dd class="right">{{fleet.specifications['KW']}}</dd>
+                                </div>
+                            </dl>
+                        </div>
+                        <div class="col-md-4">
+                            <dl class="data-list-descriptions">
+                                <div class="dd-item">
+                                    <dt class="left">Main Engine:</dt>
+                                    <dd class="right">{{fleet.specifications['Main Engine']}}</dd>
+                                </div>
+                                <div class="dd-item">
+                                    <dt class="left">Year Built:</dt>
+                                    <dd class="right">{{fleet.specifications['Year Built']}}</dd>
+                                </div>
+                                <div class="dd-item">
+                                    <dt class="left">Cruising Speed:</dt>
+                                    <dd class="right">{{fleet.specifications['Cruising Speed']}}</dd>
+                                </div>
+                                <div class="dd-item">
+                                    <dt class="left">Hull:</dt>
+                                    <dd class="right">{{fleet.specifications['Hull']}}</dd>
+                                </div>
+                                <div class="dd-item">
+                                    <dt class="left">Generators:</dt>
+                                    <dd class="right">{{fleet.specifications['Generators']}}</dd>
+                                </div>
+                            </dl>
+                        </div>
+                        <div class="col-md-4">
+                            <dl class="data-list-descriptions">
+                                <div class="dd-item">
+                                    <dt class="left">Water Maker:</dt>
+                                    <dd class="right">{{fleet.specifications['Water Maker']}}</dd>
+                                </div>
+                                <div class="dd-item">
+                                    <dt class="left">Water Capacity:</dt>
+                                    <dd class="right">{{fleet.specifications['Water Capacity']}}</dd>
+                                </div>
+                                <div class="dd-item">
+                                    <dt class="left">Electricity:</dt>
+                                    <dd class="right">{{fleet.specifications['Electricity']}}</dd>
+                                </div>
+                                <div class="dd-item">
+                                    <dt class="left">Minimum Capacity:</dt>
+                                    <dd class="right">{{fleet.specifications['Minimum Capacity']}}</dd>
+                                </div>
+                                <div class="dd-item">
+                                    <dt class="left">Maximum Capacity:</dt>
+                                    <dd class="right">{{fleet.specifications['Maximum Capacity']}}</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="fleet.safety">
+                    <h2 *ngIf="fleet.safety" class="b-goods-f__title mt-5">Safety Equipment, Navigation & Communication</h2>
+                    <div [innerHTML]="fleet.safety"></div>
+                </div>
+                <div *ngIf="fleet.diving">
+                    <h2 class="b-goods-f__title mt-5">Scuba Diving Equipment</h2>
+                    <div [innerHTML]="fleet.diving"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

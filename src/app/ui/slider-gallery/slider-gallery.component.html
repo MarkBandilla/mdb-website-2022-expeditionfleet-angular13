@@ -1,0 +1,11 @@
+<div class="b-goods-f__slider">
+    <div class="ui-slider-main js-slider-for">
+        <img class="img-scale" src="{{image}}" alt="photo" *ngFor="let image of images" />
+    </div>
+    <div class="ui-slider-nav js-slider-nav">
+        <span *ngFor="let image of images; let last = last">
+            <img class="img-scale" src="{{image}}" alt="photo" />
+            <span *ngIf="last">{{initSlick()}}</span>
+        </span>
+    </div>
+</div>
