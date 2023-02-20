@@ -234,10 +234,11 @@ function CharsStart() {
 ////////////////////////////////////////////
 // Sliders
 ///////////////////////////////////////////
-
-  if ($('.js-slider').length) {
-    $('.js-slider').slick();
-  }
+let slider = $('.js-slider');
+console.log(slider.length);
+if (slider.length && slider.length > 1) {
+  slider.slick();
+}
 
 
 ////////////////////////////////////////////
